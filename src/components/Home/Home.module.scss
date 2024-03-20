@@ -1,0 +1,31 @@
+.homeMain {
+  display: flex;
+  flex-direction: column;
+
+  .homePreview {
+    background-image: url(./imagesHome/it.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fafafa;
+    height: 110vh;
+    position: relative;
+    box-shadow: -30px 27px 60px #370617;
+  }
+  .imgleft {
+    position: absolute;
+    left: -6vw;
+    bottom: 0vw;
+    width: 25vw;
+    opacity: 70%;
+    transition: width 1s ease;
+  }
+  .imgright {
+    position: absolute;
+    right: -6vw;
+    bottom: 0vw;
+    width: 72vw;
+    opacity: 70%;
+    transition: width 1s ease;
+  }
+}

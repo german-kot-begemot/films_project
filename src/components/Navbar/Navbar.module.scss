@@ -1,0 +1,33 @@
+.navbar {
+  position: absolute;
+
+  top: 0.3em;
+  left: 0.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 7vw;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  .navbar-button {
+    width: 3vw;
+    height: 3vw;
+    border-radius: 1em;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    position: absolute;
+    transform: translateX(-100%);
+    transition: all 2s;
+  }
+  .menu.open {
+    transform: translateX(0);
+  }
+}
