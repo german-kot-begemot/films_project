@@ -1,0 +1,23 @@
+.notFound {
+  position: relative;
+
+  video {
+    width: 100%;
+  }
+
+  h1,
+  p {
+    position: absolute;
+    top: 21vw;
+    left: 12vw;
+    color: #7f001d;
+    font-size: 7vw;
+    font-weight: 100;
+  }
+
+  p {
+    font-size: 4vw;
+    top: 32vw;
+    left: 40vw;
+  }
+}

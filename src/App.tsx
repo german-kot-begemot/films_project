@@ -8,6 +8,7 @@ import Movieinder from './components/Movieinder/Movieinder';
 import SameFilm from './components/SameFilm/SameFilm';
 import MyMovie from './components/MyMovie/MyMovie';
 import Navbar from './components/Navbar/Navbar';
+import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/navbar' element={<Navbar />} />
         <Route path='/sameFilm' element={<SameFilm />} />
         <Route path='/myMovie' element={<MyMovie />} />
+        <Route path='*' element={<NotFound />} />
       </Routes>
     </div>
   );

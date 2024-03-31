@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './Home.module.scss';
 import Carousel from '../Carousel/Carousel';
 import imgleft from './imagesHome/penny_red.png';
@@ -7,7 +7,7 @@ import imgright from './imagesHome/penny_red2.png';
 const Home = () => {
   const [scrolled, setScrolled] = useState(0);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY < 100) {
         setScrolled(window.scrollY);

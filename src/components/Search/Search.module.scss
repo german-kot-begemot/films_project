@@ -1,6 +1,6 @@
 input {
   height: 3vw;
-  font-size: 1em;
+  font-size: 3vw;
   padding-left: 1vw;
   border: none;
   width: 18vw;
@@ -10,7 +10,7 @@ input {
 }
 input::placeholder {
   color: #958b7f;
-  font-size: 1em;
+  font-size: 3vw;
 }
 input:focus {
   outline: none;
