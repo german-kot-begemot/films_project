@@ -1,19 +1,20 @@
 .navbar {
   position: absolute;
-  top: 0.3em;
-  left: 0.3em;
+  top: 0.5vw;
+  left: 1.5vw;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   line-height: 7vw;
+  height: 100%;
 
   &:hover {
     opacity: 0.8;
   }
 
   .navbar-button {
-    width: 3vw;
-    height: 3vw;
+    width: 4vw;
+    height: 4vw;
     border-radius: 1em;
 
     img {
@@ -28,5 +29,11 @@
   }
   .menu.open {
     transform: translateX(0);
+  }
+  li {
+    display: flex;
+    a {
+      color: #7a0019;
+    }
   }
 }

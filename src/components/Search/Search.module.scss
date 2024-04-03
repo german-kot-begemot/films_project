@@ -10,7 +10,8 @@ input {
 }
 input::placeholder {
   color: #958b7f;
-  font-size: 3vw;
+  font-size: 2vw;
+  transform: translateY(-0.3vw);
 }
 input:focus {
   outline: none;

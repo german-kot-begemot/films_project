@@ -8,12 +8,12 @@ const Navbar = () => {
 
   return (
     <div className={styles.navbar}>
-      <Hamburger toggled={isOpen} toggle={setIsOpen} />
+      <Hamburger toggled={isOpen} toggle={setIsOpen} size={48} />
       {isOpen && (
         <nav className={`menu ${isOpen ? 'open' : ''}`}>
           <ul>
             <li>
-              <NavLink className={styles.home} to='/search' end>
+              <NavLink className={styles.home} to='/' end>
                 Home
               </NavLink>
             </li>

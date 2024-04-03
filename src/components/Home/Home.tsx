@@ -8,12 +8,12 @@ const Home = () => {
   const [scrolled, setScrolled] = useState(0);
 
   useEffect(() => {
-    const handleScroll = () => {
+    function handleScroll() {
       if (window.scrollY < 100) {
         setScrolled(window.scrollY);
         console.log(scrolled);
       }
-    };
+    }
 
     window.addEventListener('scroll', handleScroll);
 

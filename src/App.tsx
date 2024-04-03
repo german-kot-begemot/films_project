@@ -1,28 +1,12 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { RouterProvider } from 'react-router-dom';
+import router from './routes/router';
 import './App.css';
-import Header from './components/Header/Header';
-import Categories from './components/Header/Categories/Categories';
-import Home from './components/Home/Home';
-import Movieinder from './components/Movieinder/Movieinder';
-import SameFilm from './components/SameFilm/SameFilm';
-import MyMovie from './components/MyMovie/MyMovie';
-import Navbar from './components/Navbar/Navbar';
-import NotFound from './components/NotFound/NotFound';
 
 function App() {
   return (
     <div data-testid='app' className='App'>
-      <Header />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/categories' element={<Categories />} />
-        <Route path='/movieinder' element={<Movieinder />} />
-        <Route path='/navbar' element={<Navbar />} />
-        <Route path='/sameFilm' element={<SameFilm />} />
-        <Route path='/myMovie' element={<MyMovie />} />
-        <Route path='*' element={<NotFound />} />
-      </Routes>
+      <RouterProvider router={router} />
     </div>
   );
 }
