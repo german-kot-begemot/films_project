@@ -42,7 +42,7 @@ export const fetchAll = async () => {
   return allfilms.results.map(mapToFilm);
 };
 
-export const fetchTop = async () => {
+export const fetchTopMovie = async () => {
   const allfilms = await fetchFilms<{ results: MovieDto[] }>(API_TOP);
   console.log(allfilms);
   return allfilms.results.map(mapToFilm);
