@@ -15,6 +15,11 @@ const Header = () => {
             <Search />
           </li>
           <li>
+            <NavLink className={styles.categories} to='/home' end>
+              Home
+            </NavLink>
+          </li>
+          <li>
             <NavLink className={styles.categories} to='/categories' end>
               Categories
             </NavLink>

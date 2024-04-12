@@ -23,20 +23,6 @@ const fetchFilms = async <DataType,>(url: string): Promise<DataType> => {
   }
 };
 
-// const fetchFilms = async (url: string) => {
-//   try {
-//     const response = await axios.get<{ results: MovieDto[] }>(url, {
-//       params: { api_key: process.env.REACT_APP_MOVIE_API_KEY },
-//     });
-//     const films = response.data.results.map(mapToFilm);
-//     console.log('Response: ', films);
-//     return films;
-//   } catch (error) {
-//     console.log(error);
-//     return [];
-//   }
-// };
-
 export const fetchAll = async () => {
   const allfilms = await fetchFilms<{ results: MovieDto[] }>(API_URL);
   return allfilms.results.map(mapToFilm);
@@ -48,7 +34,11 @@ export const fetchTopMovie = async () => {
   return allfilms.results.map(mapToFilm);
 };
 
-// export const fetchImg = async (): Promise<Film[]> => {
-//   const img = await fetchFilms<string>(API_ID);
-//   return fetchFilms(API_ID);
+// export const fetchGenres = async () => {
+//   try {
+//     const genresList = await axios.get<Genre[]>;
+//   } catch (error) {
+//     console.log(error);
+//     throw error;
+//   }
 // };

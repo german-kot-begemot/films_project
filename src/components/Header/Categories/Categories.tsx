@@ -1,12 +1,24 @@
-import React from "react";
-import styles from "./Categories.module.scss";
+import React, { useState } from 'react';
+import styles from './Categories.module.scss';
+import { Film } from '../../../types/interfaces';
+import Snow from '../Snow/Snow';
 
 const Categories = () => {
+  // const [movies, setMovies] = useState<Film[]>([]);
+  // const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <div className={styles.categoriesContent} data-testid="categories">
-      <div>
-        <h1>Categories</h1>
-      </div>
+    <div className={styles.categoriesWrapper} data-testid='categories'>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <div className={styles.genreBlock} data-testid='genre'></div>
+      <Snow />
     </div>
   );
 };

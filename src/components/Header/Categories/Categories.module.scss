@@ -1,3 +1,9 @@
-h1 {
-  font-size: 3vw;
+.categoriesWrapper {
+  background-image: url(../../../../public/images/things.jpg);
+  background-size: cover;
+  height: 100vh;
+
+  h1 {
+    font-size: 3vw;
+  }
 }
