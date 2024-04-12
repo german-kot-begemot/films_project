@@ -3,6 +3,7 @@ import styles from './Home.module.scss';
 import Carousel from '../Carousel/Carousel';
 import imgleft from './imagesHome/penny_red.png';
 import imgright from './imagesHome/penny_red2.png';
+import { fetchAll } from '../../services/api';
 
 const Home = () => {
   const [scrolled, setScrolled] = useState(0);

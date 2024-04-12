@@ -1,46 +1,39 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Carousel.module.scss';
-import { NavLink } from 'react-router-dom';
-import { cards } from './cards';
+import { Film } from '../../types/interfaces';
+import { fetchAll, fetchTop } from '../../services/api';
+import Card from '../Films/Card/Card';
+import { API_IMG } from '../../services/apiConfig';
 
 const Carousel = () => {
-  const [index, setIndex] = useState(0);
+  const [movies, setMovies] = useState<Film[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => {
-      setIndex((index + 1) % cards.length);
-    }, 3000);
-  }, [index]);
-
-  const count = (n: number, m: number) => {
-    const result = n % m;
-    return result >= 0 ? result : result + m;
-  };
+    const findTopFilms = async () => {
+      setIsLoading(true);
+      try {
+        const topMovies = await fetchTop();
+        setMovies(topMovies);
+      } catch (error) {
+        console.error('Error fetching movies:', error);
+      }
+      setIsLoading(false);
+    };
+    findTopFilms();
+  }, []);
 
   return (
-    <div className={styles.carouselWrapper} data-testid='carousel'>
-      {cards.map((item, i) => {
-        const indexLeft = count(index - 1, cards.length);
-        const indexRight = count(index + 1, cards.length);
-        let className;
-
-        if (i === index) {
-          className = styles.activePic;
-        } else if (i === indexRight) {
-          className = styles.rightPic;
-        } else if (i === indexLeft) {
-          className = styles.leftPic;
-        } else className = 'card';
-
-        return (
-          <img
-            key={item.id}
-            className={className}
-            src={item.image}
-            alt='Some Picture'
-          ></img>
-        );
-      })}
+    <div className={styles.wrapper} data-testid='topMovies'>
+      {movies.slice(0, 5).map((movie) => (
+        <Card
+          key={movie.id}
+          id={movie.id}
+          name={movie.name}
+          description={movie.description}
+          image={`${API_IMG}${movie.image}`}
+        />
+      ))}
     </div>
   );
 };

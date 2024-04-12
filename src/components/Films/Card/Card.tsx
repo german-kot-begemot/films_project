@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './Card.module.scss';
-// import { Cocktail } from '';
+import { Film } from '../../../types/interfaces';
 
-const Card = () => {
+const Card = (props: Film) => {
   return (
     <div className={styles.card} data-testid='card'>
-      <div className={styles.cocktailPhoto}>
-        {/* <img src={props.imageUrl} alt="pic" /> */}
+      <div className={styles.filmImg}>
+        <img src={props.image} alt='pic' />
       </div>
-      <div className={styles.cocktailName}>{/* <h1>{props.name}</h1> */}</div>
+      <div className={styles.filmName}>
+        <h1>{props.name}</h1>
+      </div>
     </div>
   );
 };
