@@ -1,22 +1,27 @@
 @font-face {
-  font-family: "Stroke";
-  src: local("Stroke"), url("../public/fonts/Stroke.ttf") format("truetype");
+  font-family: 'Stroke';
+  src: local('Stroke'), url('../public/fonts/Stroke.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Zhizn";
-  src: local("Zhizn"), url("../public/fonts/Zhizn.otf") format("opentype");
+  font-family: 'Zhizn';
+  src: local('Zhizn'), url('../public/fonts/Zhizn.otf') format('opentype');
+}
+@font-face {
+  font-family: 'ZnikomitNo25';
+  src: local('ZnikomitNo25'),
+    url('../public/fonts/ZnikomitNo25.otf') format('opentype');
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }

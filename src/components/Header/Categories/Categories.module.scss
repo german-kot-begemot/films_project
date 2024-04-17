@@ -2,8 +2,101 @@
   background-image: url(../../../../public/images/things.jpg);
   background-size: cover;
   height: 100vh;
+  overflow: hidden;
+  width: 100%;
 
-  h1 {
-    font-size: 3vw;
+  .blocksHolder {
+    width: 83vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 20vh;
+    animation: genreBlock 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    .genreBlock {
+      width: 8vw;
+      height: 60vh;
+      background-size: cover;
+      background-position: center;
+      box-shadow: 0px -20px 60px #370617;
+      border-radius: 5px;
+      display: flex;
+
+      h1 {
+        font-size: 2vw;
+        align-self: end;
+        color: cornsilk;
+        margin: 0 auto;
+      }
+    }
+    .genreBlock:hover {
+      transform: scale(1.4);
+      transition: transform 1.3s ease-in-out;
+      cursor: pointer;
+      z-index: 100;
+    }
+
+    .block1 {
+      background-image: url(../../../../public/images/block1.jpg);
+    }
+    .block2 {
+      background-image: url(../../../../public/images/block2.jpeg);
+      h1 {
+        font-size: 1.5vw;
+      }
+    }
+    .block3 {
+      background-image: url(../../../../public/images/block3.jpeg);
+    }
+    .block4 {
+      background-image: url(../../../../public/images/block4.jpeg);
+    }
+    .block5 {
+      background-image: url(../../../../public/images/block5.jpg);
+    }
+    .block6 {
+      background-image: url(../../../../public/images/block6.jpeg);
+    }
+    .block7 {
+      background-image: url(../../../../public/images/block7.jpeg);
+    }
+    .block8 {
+      background-image: url(../../../../public/images/block8.jpeg);
+    }
+    .block9 {
+      background-image: url(../../../../public/images/block9.jpeg);
+      h1 {
+        font-size: 1.5vw;
+      }
+    }
+    .block10 {
+      background-image: url(../../../../public/images/block10.jpeg);
+    }
+
+    @keyframes genreBlock {
+      0% {
+        transform: rotateY(30deg) translateY(-300px) skewY(-30deg);
+        opacity: 0;
+        transform: rotateX(-100deg);
+        transform-origin: top;
+      }
+      100% {
+        transform: rotateY(0deg) translateY(0vw, 7vh) skewY(0deg);
+        opacity: 1;
+        transform: rotateX(0deg);
+        transform-origin: top;
+      }
+    }
+    :nth-child(2),
+    :nth-child(5),
+    :nth-child(8) {
+      transform: translate(0vw, 7vh);
+    }
+    :nth-child(3),
+    :nth-child(6),
+    :nth-child(9) {
+      transform: translate(0vw, 14vh);
+    }
   }
 }
