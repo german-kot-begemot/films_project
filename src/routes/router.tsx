@@ -8,6 +8,7 @@ import MyMovie from '../components/MyMovie/MyMovie';
 import Navbar from '../components/Navbar/Navbar';
 import NotFound from '../components/NotFound/NotFound';
 import Layout from '../layouts';
+import GenrePage from '../components/Header/GenrePage/GenrePage';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,94 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
+  {
+    path: '/categories/:categoryId',
+    element: (
+      <Layout>
+        <GenrePage />
+      </Layout>
+    ),
+  },
+  // {
+  //   path: '/categories/action',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/adventure',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/comedy',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/crime',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/drama',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/fantasy',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/horror',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/mystery',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/romance',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
+  // {
+  //   path: '/categories/thriller',
+  //   element: (
+  //     <Layout>
+  //       <GenrePage />
+  //     </Layout>
+  //   ),
+  // },
   {
     path: '/movieinder',
     element: (

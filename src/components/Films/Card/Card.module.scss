@@ -1,44 +1,11 @@
-// .card {
-//   border-radius: 20px;
-//   // background: #011a1d;
-//   display: flex;
-//   justify-content: space-around;
-//   align-items: center;
-//   flex-direction: column;
-//   min-height: 300px;
-//   box-shadow: inset 0px 0px 1px 1px rgb(19 71 67 / 50%);
-//   background: -webkit-gradient(
-//     linear,
-//     left top,
-//     left bottom,
-//     from(#011214),
-//     to(#453d4f)
-//   );
-// }
-// .card:hover {
-//   box-shadow: inset 0px 0px 15px 15px rgb(185 158 189 / 30%);
-//   transition: all 0.7s linear;
-// }
-// .cocktailPhoto {
-//   width: 85%;
-//   margin-top: 20px;
-
-//   img {
-//     width: 100%;
-//     border-radius: 10px;
-//     object-fit: cover;
-//     object-position: top;
-//   }
-// }
-// .cocktailName h1 {
-//   font-family: 'cotta-free';
-//   font-size: 25px;
-//   font-weight: 100;
-//   margin: 0;
-// }
-
-// @media screen and (max-width: 550px) {
-//   .card {
-//     min-height: 150px;
-//   }
-// }
+.card {
+  box-shadow: 10px 10px 60px #370617;
+  img {
+    width: 15vw;
+    border-radius: 10px;
+  }
+  .filmName h1 {
+    font-size: 1.5vw;
+    max-width: 252px;
+  }
+}

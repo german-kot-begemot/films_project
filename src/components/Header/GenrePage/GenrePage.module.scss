@@ -1,0 +1,21 @@
+.wrapper {
+  background-image: url(../../../../public/images/gradient.jpg);
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  padding-top: 12vh;
+
+  h1 {
+    font-size: 10vh;
+  }
+  .movieHolder {
+    display: flex;
+    width: 81%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+    // background-color: bisque;
+    padding: 5vh 0;
+    // background-image: url(../../../../public/images/movie-1344805_1920.jpg);
+  }
+}
