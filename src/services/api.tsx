@@ -7,6 +7,7 @@ import {
   API_GENRES_MOVIES,
   API_IMG,
   API_DETAILS,
+  API_VIDEO,
 } from './apiConfig';
 
 const mapToFilm = (movie: MovieDto): Film => ({
@@ -71,6 +72,18 @@ export const findDetails = async (id: number) => {
   try {
     const exactFilm = await fetchFilms<MovieDto>(API_DETAILS(id));
     return mapToFilm(exactFilm);
+  } catch (error) {
+    console.log(error);
+    throw error;
+  }
+};
+
+export const findVideo = async (id: number) => {
+  try {
+    const exactTrailer = await fetchFilms<{ results: { key: string }[] }>(
+      API_VIDEO(id)
+    );
+    return exactTrailer.results[0].key;
   } catch (error) {
     console.log(error);
     throw error;

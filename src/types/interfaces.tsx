@@ -3,6 +3,7 @@ export interface Film {
   name: string;
   description: string;
   image: string;
+  video?: boolean;
 }
 
 export interface MovieDto {
