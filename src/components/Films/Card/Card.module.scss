@@ -1,11 +1,16 @@
 .card {
   box-shadow: 10px 10px 60px #370617;
+  margin-bottom: 5vh;
+  background-image: url(../../../../public/images/gradient.jpg);
+  background-size: contain;
+  border-radius: 10px;
+  max-width: 15vw;
+
   img {
     width: 15vw;
     border-radius: 10px;
   }
   .filmName h1 {
     font-size: 1.5vw;
-    max-width: 252px;
   }
 }

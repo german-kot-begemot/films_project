@@ -6,6 +6,7 @@ import {
   API_URL,
   API_GENRES_MOVIES,
   API_IMG,
+  API_DETAILS,
 } from './apiConfig';
 
 const mapToFilm = (movie: MovieDto): Film => ({
@@ -36,7 +37,6 @@ export const fetchAll = async () => {
 
 export const fetchTopMovie = async () => {
   const allfilms = await fetchFilms<{ results: MovieDto[] }>(API_TOP);
-  console.log(allfilms);
   return allfilms.results.map(mapToFilm);
 };
 
@@ -45,7 +45,6 @@ export const findByGenres = async (genreId: number) => {
     const genresList = await fetchFilms<{ results: MovieDto[] }>(
       API_GENRES_MOVIES(genreId)
     );
-    console.log(genresList);
     return genresList.results.map(mapToFilm);
   } catch (error) {
     console.log(error);
@@ -53,14 +52,27 @@ export const findByGenres = async (genreId: number) => {
   }
 };
 
-export const fetchImagesByMovieId = async (movieId: number) => {
+export const findById = async (id: number) => {
   try {
-    const response = await axios.get(`${API_URL}/movie/${movieId}/images`, {
-      params: { api_key: process.env.REACT_APP_MOVIE_API_KEY },
-    });
-    return response.data;
+    const films = await fetchFilms<{ movie_results: MovieDto[] }>(API_ID(id));
+    const film = films.movie_results.find((movie) => movie.id === id);
+    if (film) {
+      return mapToFilm(film);
+    } else {
+      throw new Error(`Film with id ${id} not found`);
+    }
   } catch (error) {
-    console.error('Error fetching images by movie ID:', error);
+    console.log(error);
+    throw error;
+  }
+};
+
+export const findDetails = async (id: number) => {
+  try {
+    const exactFilm = await fetchFilms<MovieDto>(API_DETAILS(id));
+    return mapToFilm(exactFilm);
+  } catch (error) {
+    console.log(error);
     throw error;
   }
 };

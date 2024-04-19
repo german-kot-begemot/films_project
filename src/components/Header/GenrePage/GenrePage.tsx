@@ -2,15 +2,14 @@ import React, { useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import styles from './GenrePage.module.scss';
 import { Film } from '../../../types/interfaces';
-import { fetchImagesByMovieId, findByGenres } from '../../../services/api';
 import { genres } from '../../../types/types';
 import Card from '../../Films/Card/Card';
+import { findByGenres } from '../../../services/api';
 
 const GenrePage = () => {
   const [movies, setMovies] = useState<Film[]>([]);
   const params = useParams<{ categoryId: string }>();
   const [isLoading, setIsLoading] = useState(true);
-  console.log(params);
 
   useEffect(() => {
     const getMovies = async () => {
