@@ -6,13 +6,31 @@
     width: 50%;
     padding: 12vh 2vw 0;
 
+    div {
+      display: flex;
+      justify-content: end;
+
+      p {
+        margin: 0 0 0 2vw;
+      }
+    }
+
     h1 {
       font-size: 7vh;
+      box-shadow: 10px 10px 60px #370617;
     }
     p {
       font-size: 3.5vh;
       margin-top: 5vh;
       text-align: justify;
+    }
+    .youtubePlayer {
+      width: 100%;
+      iframe {
+        width: 100%;
+        margin: 5vh 0;
+        box-shadow: 10px 10px 60px #370617;
+      }
     }
   }
   .filmImg {
@@ -21,4 +39,18 @@
       width: 80%;
     }
   }
+  .sameFilms {
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+  }
 }
+// .genreInCardDetails {
+//   width: 50%;
+//   .movieHolder {
+//     width: 30%;
+//   }
+// }
+// .genreInCardDetails .wrapper .movieHolder {
+//   width: 20% !important;
+// }

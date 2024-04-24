@@ -78,3 +78,9 @@ export const genres: Genre[] = [
     name: 'Western',
   },
 ];
+
+export type GenrePageProps = {
+  className?: string;
+  styles?: React.CSSProperties;
+  cardLimit?: number;
+};

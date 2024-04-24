@@ -4,6 +4,8 @@ export interface Film {
   description: string;
   image: string;
   video?: boolean;
+  release_date?: string;
+  vote_average?: number;
 }
 
 export interface MovieDto {

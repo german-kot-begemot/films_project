@@ -15,6 +15,8 @@ const mapToFilm = (movie: MovieDto): Film => ({
   name: movie.title,
   description: movie.overview,
   image: `${API_IMG}${movie.poster_path}`,
+  release_date: movie.release_date,
+  vote_average: movie.vote_average,
 });
 
 const fetchFilms = async <DataType,>(url: string): Promise<DataType> => {
